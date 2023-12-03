@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+    <h2>Smart Attendance</h2>
+
+    <form id="imageForm">
+        <label for="imageInput">Choose an image:</label>
+        <input type="file" id="imageInput" accept="image/*" required>
+
+        <!-- <input type="file" id="imageInput" accept="image/*" required> -->
+        <button type="button" onclick="uploadImage()">Upload</button>
+    </form>
+
+    <h3>Attended Students</h3>
+    <table id="attendedTable">
+        <thead>
+            <tr>
+                <th>Snapshot</th>
+                <th>Student Name</th>
+            </tr>
+        </thead>
+        <tbody id="attendedBody"></tbody>
+    </table>
+
+    <h3>Absent Students</h3>
+    <table id="absentTable">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+            </tr>
+        </thead>
+        <tbody id="absentBody"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
