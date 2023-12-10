@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Attendance</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .tangerine-font {
+            font-family: 'Tangerine', cursive;
+            font-size: 60px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .resized-image {
+            width: 290px;
+            /* Set the width of the image */
+            height: 100px;
+            margin-top: 20px;
+        }
+        
+        .header img {
+            height: 100px;
+            width: 100px;
+            margin: 0 10px;
+        }
+        
+        .form-label-left {
+            text-align: left;
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            /* Add margin */
+        }
+        
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+        
+        form {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
+        
+        button {
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        tbody tr:hover {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <div class="header">
+        <img src="ai.jpg" alt="Left image">
+        <h2 class="tangerine-font">Welcome To Our Website</h2>
+
+        <img src="delta.jpg" alt="Right image">
+    </div>
+
+    <div class="container text-center">
+        <!-- <h2 class="my-4" style="font-family: 'Roboto', sans-serif;">Smart Attendance</h2> -->
+        <img src="R.png" alt="Resized image" class="resized-image">
+
+        <!-- <div>
+            <p class="medium-font">Fast TENDE</p>
+            <p class="small-font">Take your attendance easily</p>
+        </div> -->
+        <form id="imageForm" class="mb-3">
+            <label for="imageInput" class="form-label form-label-left">Choose an image:</label>
+
+            <input type="file" class="form-control" id="imageInput" accept="image/*" required>
+            <button type="button" class="btn btn-primary" onclick="uploadImage()">Upload</button>
+        </form>
+
+        <h3>Attended Students</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Snapshot</th>
+                    <th scope="col">Student Name</th>
+                </tr>
+            </thead>
+            <tbody id="attendedBody"></tbody>
+        </table>
+
+        <h3>Absent Students</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Student Name</th>
+                </tr>
+            </thead>
+            <tbody id="absentBody"></tbody>
+        </table>
+    </div>
+    <style>
+        /* Add this CSS to your existing styles */
+        
+        .medium-font {
+            font-size: 1.5em;
+            /* Adjust size as needed */
+            font-weight: bold;
+            margin-bottom: 5px;
+            /* Add space between the two texts */
+        }
+        
+        .small-font {
+            font-size: 0.8em;
+            /* Adjust size as needed */
+            color: #555;
+            /* Adjust color if desired */
+        }
+    </style>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
